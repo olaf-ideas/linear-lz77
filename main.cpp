@@ -24,7 +24,5 @@ int main() {
 		std::cerr << x << ' ';
 	std::cerr << '\n';
 
-	
-
 	return 0;
 }

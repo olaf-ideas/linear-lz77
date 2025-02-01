@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <array>
+#include <numeric>
 
 template <std::size_t size>
 std::vector<int> radix_sort_order(int m, const std::vector<std::array<int, size>> &v) {
@@ -13,7 +14,6 @@ std::vector<int> radix_sort_order(int m, const std::vector<std::array<int, size>
 	for (int i = (int) size - 1; i >= 0; i--) {
 		std::vector<int> buckets(m);
 		for (int j = 0; j < n; j++) {
-			assert(0 <= v[j][i] && v[j][i] < m);
 			buckets[v[j][i]]++;
 		}
 
