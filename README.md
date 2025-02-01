@@ -8,14 +8,15 @@
 │   ├── bench_suffix_array.cpp
 │   └── bench_lz77.cpp
 ├── bin/
-├── src/
+├── brute/ # Brute-force of every algorithm block
+├── src/   # Source of the algorithm
 │   ├── main.cpp
 │   ├── lcp.hpp
 │   ├── rmq.hpp
 │   ├── lz77.hpp
 │   ├── radix.hpp
 │   └── suffix_array.hpp
-├── test/
+├── test/  # Simple fuzzing
 │   ├── test_lz77.cpp
 │   ├── test_radix.cpp
 │   └── test_suffix_array.cpp
