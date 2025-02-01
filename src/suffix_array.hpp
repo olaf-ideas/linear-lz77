@@ -5,7 +5,7 @@
 #include <tuple>
 
 #include "radix.hpp"
-#include "brute/suffix_array_brute.hpp"
+#include "../brute/suffix_array_brute.hpp"
 
 std::vector<int> suffix_array(std::vector<int> w) {
 	const int n = (int) w.size();

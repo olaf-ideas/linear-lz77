@@ -3,7 +3,7 @@
 #include <vector>
 #include <cassert>
 
-#include "../suffix_array.hpp"
+#include "../src/suffix_array.hpp"
 #include "../brute/suffix_array_brute.hpp"
 
 void test_suffix_array(int min_n, int max_n, int seed = 2137) {

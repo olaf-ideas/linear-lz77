@@ -3,7 +3,7 @@
 #include <vector>
 #include <cassert>
 
-#include "../rmq.hpp"
+#include "../src/rmq.hpp"
 #include "../brute/rmq_brute.hpp"
 
 void test_rmq(int min_n, int max_n, int seed = 2137) {
@@ -19,43 +19,43 @@ void test_rmq(int min_n, int max_n, int seed = 2137) {
 		int n = randint(min_n, max_n);
 		std::vector<int> s(n);
 
-    for (int &c : s) {
-      c = randint(0, n - 1);
-    }
+		for (int &c : s) {
+			c = randint(0, n - 1);
+		}
 
-    RangeMinimumQuery<int> fast(s);
-    RangeMinimumQueryBrute<int> slow(s);
+		RangeMinimumQuery<int> fast(s);
+		RangeMinimumQueryBrute<int> slow(s);
 
-    int q = randint(min_n, max_n);
+		int q = randint(min_n, max_n);
 
-    while (q--) {
-      int l = randint(0, n - 1);
-      int r = randint(l + 1, n);
+		while (q--) {
+			int l = randint(0, n - 1);
+			int r = randint(l + 1, n);
 
-      if(fast.query(l, r) != slow.query(l, r)) {
-        std::cerr << "v: ";
-        for (int x : s) {
-          std::cerr << x << ' ';
-        }
-        std::cerr << '\n';
+			if(fast.query(l, r) != slow.query(l, r)) {
+				std::cerr << "v: ";
+				for (int x : s) {
+					std::cerr << x << ' ';
+				}
+				std::cerr << '\n';
 
-        std::cerr << "l, r: " << l << ' ' << r << '\n';
+				std::cerr << "l, r: " << l << ' ' << r << '\n';
 
-        std::cerr << fast.query(l, r) << " vs " << slow.query(l, r) << '\n';
+				std::cerr << fast.query(l, r) << " vs " << slow.query(l, r) << '\n';
 
-        assert(false);
-      }
-    }
-  }
+				assert(false);
+			}
+		}
+	}
 }
 
 
 int main() {
 
-  test_rmq(1, 5, 1);
-  test_rmq(1, 25, 1);
-  test_rmq(1, 100, 1);
-  test_rmq(1, 500, 1);
+	test_rmq(1, 5, 1);
+	test_rmq(1, 25, 1);
+	test_rmq(1, 100, 1);
+	test_rmq(1, 500, 1);
 
-  return 0;
+	return 0;
 }

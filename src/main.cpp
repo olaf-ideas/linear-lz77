@@ -2,6 +2,9 @@
 
 #include "suffix_array.hpp"
 
+/* 
+	File created for hand testing/playground purposes.
+*/
 
 int main() {
 

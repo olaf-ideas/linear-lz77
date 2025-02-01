@@ -4,7 +4,7 @@
 #include <cassert>
 #include <random>
 
-#include "../radix.hpp"
+#include "../src/radix.hpp"
 #include "../brute/radix_brute.hpp"
 
 template <std::size_t max_size>
