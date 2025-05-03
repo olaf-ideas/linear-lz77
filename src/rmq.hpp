@@ -4,10 +4,6 @@
 #include <algorithm>
 #include <iostream>
 
-/*
-  RMQ based on: https://codeforces.com/blog/entry/78931
-*/
-
 template <typename T>
 class RangeMinimumQuery {
 
