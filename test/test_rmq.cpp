@@ -15,7 +15,7 @@ void test_rmq(int min_n, int max_n, int seed = 2137) {
 		return std::uniform_int_distribution<int>(a, b)(rng);
 	};
 
-	for (int test = 0; test < 10000; test++) {
+	for (int test = 0; test < 50000; test++) {
 		int n = randint(min_n, max_n);
 		std::vector<int> s(n);
 
